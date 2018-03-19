@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
 import com.example.oguerisck.appa.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -17,7 +18,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private FirebaseAuth firebaseAuth;
 
     private TextView textViewUserEmail;
-    private ImageButton buttonLogout;
+    private TextView positionView;
+    private Button buttonLogout;
+    private ImageButton buttonMenu;
+
 
 
     @Override
@@ -34,9 +38,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         FirebaseUser user= firebaseAuth.getCurrentUser();
 
+
+        positionView = (TextView) findViewById(R.id.positionView);
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText(" " + user.getEmail());
-        buttonLogout = (ImageButton) findViewById(R.id.logoutButton);
+        buttonLogout = (Button) findViewById(R.id.logoutButton);
+        buttonMenu = (ImageButton) findViewById(R.id.menuButton);
 
         buttonLogout.setOnClickListener(this);
 
@@ -49,5 +56,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             finish();
             startActivity( new Intent(this, LoginActivity.class));
         }
+        if(v == buttonMenu){
+            firebaseAuth.signOut();
+            finish();
+            startActivity( new Intent(this, Home.class));
+        }
     }
-}
+

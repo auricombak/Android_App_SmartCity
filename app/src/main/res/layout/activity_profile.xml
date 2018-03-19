@@ -130,6 +130,7 @@
                 android:layout_height="36dp"
                 android:src="@drawable/ic_person_pin_circle_black_24dp"/>
             <TextView
+                android:id="@+id/positionView"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
