@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "400480272516",
+    "firebase_url": "https://ville-futee.firebaseio.com",
+    "project_id": "ville-futee",
+    "storage_bucket": "ville-futee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400480272516:android:c2b3f439bc330df6",
+        "android_client_info": {
+          "package_name": "com.example.oguerisck.appa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400480272516-gqg8mv6bi2nqf1hrt4c719ghaa725e3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD6yWLZWSc2B5LtTSb7Pr-HYZkTR1nApw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
