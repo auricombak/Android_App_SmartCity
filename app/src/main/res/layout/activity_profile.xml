@@ -24,8 +24,8 @@
                 android:layout_marginTop="25dp"
                 android:src="@drawable/user_icon"/>
 
-            <TextView
-                android:id="@+id/userPseudo"
+<!--            <TextView
+                android:id="@+id/viewUserPseudo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -33,7 +33,19 @@
                 android:text="Utilisateur 1"
                 android:textColor="#fff"
                 android:textSize="21sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="visible" />-->
+
+            <EditText
+                android:id="@+id/setUserPseudo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Utilisateur 1"
+                android:textColor="#fff"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/textViewUserEmail"
                 android:layout_width="wrap_content"
@@ -50,7 +62,11 @@
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="200dp"
-            android:id="@+id/cardView">
+            android:id="@+id/cardView"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -66,16 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:src="@drawable/facebook_ico" />
-                    <TextView
-                        android:id="@+id/lienFacebook"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lier son compte à facebook"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -87,16 +94,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:src="@drawable/instagram_ico" />
-                    <TextView
-                        android:id="@+id/lienInstagram"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lier son compte à Instagram"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -108,16 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
                         android:src="@drawable/twitter_ico" />
-                    <TextView
-                        android:id="@+id/lienTwitter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lier son compte à Twitter"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -130,7 +119,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="45dp">
+        android:layout_marginTop="20dp">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -145,7 +134,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Position"
-                android:paddingLeft="20dp"/>
+                android:paddingLeft="20dp"
+                android:textSize="20"
+                android:textColor="#000000"/>
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="20dp"
@@ -157,72 +148,50 @@
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@drawable/ic_phone_android_black_24dp"/>
-            <TextView
+<!--            <TextView
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="+33652554412"
+                android:paddingLeft="20dp"/>-->
+            <EditText
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numéros de telephone"
                 android:paddingLeft="20dp"/>
+
         </LinearLayout>
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:layout_gravity="right"
-        android:layout_marginTop="40dp">
-    <ImageButton
-        android:id="@+id/logoutButton"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:src="@drawable/ic_exit_to_app_black_24dp"/>
-
-    </LinearLayout>
-    <!--<TextView
-        android:id="@+id/textViewUserEmail"
-        android:layout_width="259dp"
-        android:layout_height="48dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="16dp" />
-
+        android:layout_gravity="center_horizontal"
+        android:weightSum="5">
     <Button
-        android:id="@+id/buttonLogout"
-        android:layout_width="261dp"
-        android:layout_height="46dp"
-        android:text="Logout"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <EditText
-        android:id="@+id/editText"
+        android:background="@drawable/buttonstyleithgradient"
+        android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Pseudo"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="76dp" />
+        android:layout_weight="2"
+        android:layout_gravity="center_horizontal"
+        android:text="Se déconnecter"
+        android:textColor="#fff"
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="292dp" />
+        />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Description"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="156dp" />-->
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/buttonstyleithgradient"
+            android:src="@drawable/ic_home_black_24dp"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </LinearLayout>

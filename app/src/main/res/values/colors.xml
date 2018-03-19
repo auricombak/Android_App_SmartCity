@@ -2,10 +2,12 @@
 <resources>
     <color name="colorPrimary">#FFC107</color>
     <color name="colorPrimaryDark">#FFA000</color>
-    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="backgroundcolor">#FFFFFF</color>
     <color name="lightgray">#ededed</color>
     <color name="deeppurple">#7c4dff</color>
     <color name="yello">#ffb300</color>
     <color name="green">#00bfa5</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="whitePlus">#F0FFF0</color>
+    <color name="exit">#FE2E64</color>
 </resources>
