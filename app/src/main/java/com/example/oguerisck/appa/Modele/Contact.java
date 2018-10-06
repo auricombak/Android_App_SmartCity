@@ -1,50 +1,63 @@
 package com.example.oguerisck.appa.Modele;
 
+import java.util.Date;
+
 /**
  * Created by Oguerisck on 04/03/2018.
  */
 
 public class Contact {
-    int id;
-    String name, email, uname, pass;
+    String nom, prenom, dateNaissance, telephone;
+    SettingsActualite settingsActualite;
 
-    public void setId(int id) {
-        this.id = id;
+
+    public Contact( String nom,  String prenom, String dateNaissance, String telephone) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.dateNaissance = dateNaissance;
+        this.telephone = telephone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public String getNom() {
+        return nom;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public String getDateNaissance() {
+        return dateNaissance;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public int getId() {
-        return id;
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getName() {
-        return name;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getEmail() {
-        return email;
+    public void setDateNaissance(String dateNaissance) {
+        this.dateNaissance = dateNaissance;
     }
 
-    public String getUname() {
-        return uname;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
-    public String getPass() {
-        return pass;
+    public SettingsActualite getSettingsActualite() {
+        return settingsActualite;
+    }
+
+    public void setSettingsActualite(SettingsActualite settingsActualite) {
+        this.settingsActualite = settingsActualite;
     }
 }

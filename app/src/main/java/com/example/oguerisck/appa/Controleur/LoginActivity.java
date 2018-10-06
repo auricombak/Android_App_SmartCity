@@ -1,7 +1,8 @@
 package com.example.oguerisck.appa.Controleur;
-
+import com.example.oguerisck.appa.R;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.oguerisck.appa.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -34,6 +34,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //if you want to lock screen for always Portrait mode
+        setRequestedOrientation(ActivityInfo
+                .SCREEN_ORIENTATION_PORTRAIT);
+
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -44,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         editTextEmail = (EditText) findViewById(R.id.etEmail);
         editTextPassword = (EditText) findViewById(R.id.etPassword);
-        buttonLogin = (Button) findViewById(R.id.bLogin);
+        buttonLogin = (Button) findViewById(R.id.button_signin);
         textViewRegister = (TextView) findViewById(R.id.tvRegister);
 
         buttonLogin.setOnClickListener(this);
@@ -83,7 +87,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(task.isSuccessful()){
                             //Start Activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Home.class));
                         }
                     }
                 });

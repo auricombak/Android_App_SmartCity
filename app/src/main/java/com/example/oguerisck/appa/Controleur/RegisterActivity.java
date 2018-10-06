@@ -2,6 +2,7 @@ package com.example.oguerisck.appa.Controleur;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.example.oguerisck.appa.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -34,6 +36,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //if you want to lock screen for always Portrait mode
+        setRequestedOrientation(ActivityInfo
+                .SCREEN_ORIENTATION_PORTRAIT);
+
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         if(firebaseAuth.getCurrentUser() != null){
@@ -45,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         editTextEmail = (EditText) findViewById(R.id.erEmail);
         editTextPassword = (EditText) findViewById(R.id.erPassword);
-        buttonRegister = (Button) findViewById(R.id.bRegister);
+        buttonRegister = (Button) findViewById(R.id.btn_signUp);
         textViewSignin = (TextView) findViewById(R.id.tvLogin);
 
         buttonRegister.setOnClickListener(this);
@@ -137,7 +144,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         });*/
 
-    }
+}
 
 
 

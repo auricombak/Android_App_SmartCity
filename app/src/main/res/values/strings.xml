@@ -3,6 +3,17 @@
     <string name="title_activity_user_area">Sign in</string>
 
     <!-- Strings related to login -->
+    <string name="title_profile">Profil</string>
+    <string name="title_dashboard">Accueil</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_setup">Reglages</string>
+
+    <string name="title_commerce">Commerces</string>
+    <string name="title_offre">Offres</string>
+    <string name="title_calendar">Calendrier</string>
+    <string name="title_meteo">Meteo</string>
+    <string name="news">Actualités</string>
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -14,4 +25,21 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="categories">
+        <item>Restaurant</item>
+        <item>Pizzeria</item>
+        <item>Imprimerie</item>
+        <item>Supermarché</item>
+        <item>Boucherie</item>
+        <item>Boulanger</item>
+        <item>Epicerie</item>
+        <item>Cordonnier</item>
+        <item>Imprimerie</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_publicite_activite">PubliciteActivite</string>
 </resources>
